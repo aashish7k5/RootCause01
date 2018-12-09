@@ -1,5 +1,6 @@
 package com.example.aashishkumar.rootcause01;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Calendar;
 
 public class TrackTrip extends AppCompatActivity {
 
@@ -46,8 +48,18 @@ public class TrackTrip extends AppCompatActivity {
         end = (EditText) findViewById(R.id.endtextbox);
         text = (TextView) findViewById(R.id.displaytext);
 
+        if(start.getText().length() == 0 || end.getText().length() == 0 || mode.length() == 0)
+        {
+            text.setText("Please input all the parameters to submit");
+            text.setTextColor(Color.RED);
+            return;
+        }
+
+
+
+        text.setTextColor(Color.CYAN);
         String complete = "";
-        complete += start.getText(); complete += " *" + mode + "* "; complete += end.getText(); complete += "λ";
+        complete += start.getText(); complete += "*" + mode + "*"; complete += end.getText() + "*"; complete += Calendar.getInstance().getTime().toString().substring(0, 10); complete += "λ";
         try {
             FileOutputStream stream = new FileOutputStream(MainActivity.tripsfile, true);
             try{
@@ -66,6 +78,7 @@ public class TrackTrip extends AppCompatActivity {
         }
 
         text.setText(contents);
+        start.setText(""); end.setText(""); mode = "";
     }
 
     public void SelectTrain(View view)
