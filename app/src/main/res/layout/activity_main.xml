@@ -6,41 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <Button
+        android:id="@+id/button_track"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="191dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="265dp"
+        android:onClick="TrackTripScreen"
+        android:text="TRACK YOUR TRIP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/button_past"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_track"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/button_past"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="191dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:onClick="TrackTripScreen"
-        android:text="TRACK YOUR TRIP"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/button_past"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="191dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="VIEW PAST TRIPS"
         android:onClick="ViewPastTripsScreen"
+        android:text="VIEW PAST TRIPS"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/button_settings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,17 +41,19 @@
 
     <Button
         android:id="@+id/button_settings"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="191dp"
-        android:layout_height="0dp"
+        android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:onClick="SettingsScreen"
         android:text="SETTINGS"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_past" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -66,5 +61,21 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73"
+        app:srcCompat="@drawable/ic_home_page_icon" />
 
 </android.support.constraint.ConstraintLayout>
