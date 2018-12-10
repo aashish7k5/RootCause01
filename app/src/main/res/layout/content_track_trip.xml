@@ -10,80 +10,104 @@
 
     <TextView
         android:id="@+id/displaytext"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:text="this is some text">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="173dp"
+        android:text="Enter your starting place:"
+        app:layout_constraintBottom_toTopOf="@+id/starttextbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
+
+    <TextView
+        android:id="@+id/displaytext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="190dp"
+        android:text="Enter your destination:"
+        app:layout_constraintBottom_toTopOf="@+id/endtextbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/train" />
+
 
     <EditText
         android:id="@+id/starttextbox"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/train"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/displaytext" />
 
-    <Button
+    <ImageButton
         android:id="@+id/train"
+        style="@android:style/Widget.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="SelectTrain"
-        android:text="T"
-        app:layout_constraintBottom_toTopOf="@+id/endtextbox"
+        android:src="@drawable/ic_train"
+        app:layout_constraintBottom_toTopOf="@+id/displaytext2"
         app:layout_constraintEnd_toStartOf="@+id/bus"
-        app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/starttextbox"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/starttextbox" />
 
-    <Button
+    <ImageButton
         android:id="@+id/bus"
+        style="@android:style/Widget.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="SelectBus"
-        android:text="B"
+        android:src="@drawable/ic_bus"
         app:layout_constraintBottom_toTopOf="@+id/endtextbox"
         app:layout_constraintEnd_toStartOf="@+id/ecar"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/starttextbox"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/train"
+        app:layout_constraintTop_toBottomOf="@+id/starttextbox" />
 
-    <Button
+    <ImageButton
         android:id="@+id/ecar"
+        style="@android:style/Widget.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="52dp"
         android:layout_marginBottom="8dp"
         android:onClick="SelectCar"
-        android:text="Car"
+        android:src="@drawable/ic_car"
         app:layout_constraintBottom_toTopOf="@+id/endtextbox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/starttextbox"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/bus"
+        app:layout_constraintTop_toBottomOf="@+id/starttextbox" />
 
     <EditText
         android:id="@+id/endtextbox"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="176dp"
-        app:layout_constraintBottom_toBottomOf="@+id/displaytext"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="270dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 

@@ -20,7 +20,7 @@ public class ViewPastTrips extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView mtext = findViewById(R.id.mtext);
+        TextView mtext = findViewById(R.id.text);
         String contents = "";
         Scanner in = null;
         try {
