@@ -84,6 +84,7 @@ public class TrackTrip extends AppCompatActivity {
     public void SelectTrain(View view)
     {
         mode = " Train ";
+
     }
 
     public void SelectBus(View view)

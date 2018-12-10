@@ -16,6 +16,41 @@
 
     </TextView>
 
+    <TextView
+        android:id="@+id/Start"
+        android:layout_width="250dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="center"
+        android:text="Enter Starting Point"
+        app:layout_constraintBottom_toTopOf="@+id/starttextbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/displaytext">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/dest"
+        android:layout_width="250dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:text="Enter Destination Point"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/endtextbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bus">
+
+    </TextView>
+
     <EditText
         android:id="@+id/starttextbox"
         android:layout_width="300dp"
@@ -27,10 +62,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/displaytext" />
 
-    <Button
+    <ImageButton
         android:id="@+id/train"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher_round"
         android:layout_marginStart="8dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
@@ -44,8 +80,9 @@
         app:layout_constraintTop_toBottomOf="@+id/starttextbox"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <ImageButton
         android:id="@+id/bus"
+        android:src="@mipmap/ic_launcher_round"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="164dp"
@@ -61,12 +98,13 @@
         app:layout_constraintTop_toBottomOf="@+id/starttextbox"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <ImageButton
+        android:src="@mipmap/ic_launcher_round"
         android:id="@+id/ecar"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="68dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="8dp"
         android:onClick="SelectCar"
         android:text="Car"
@@ -81,8 +119,9 @@
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="176dp"
-        app:layout_constraintBottom_toBottomOf="@+id/displaytext"
+        android:layout_marginBottom="200dp"
+        app:layout_goneMarginTop="@dimen/app_bar_height"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
