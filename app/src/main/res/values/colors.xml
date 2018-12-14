@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#77c378</color>
+    <color name="colorPrimary">#29582c</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#303030</color>
+    <color name="submitButton">#f9fbfa</color>
 </resources>
