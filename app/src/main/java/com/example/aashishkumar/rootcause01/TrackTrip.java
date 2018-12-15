@@ -1,6 +1,7 @@
 package com.example.aashishkumar.rootcause01;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 import org.w3c.dom.Text;
 
@@ -27,6 +31,8 @@ public class TrackTrip extends AppCompatActivity {
     public EditText end;
     public TextView text;
     public String mode;
+    public ImageButton imageButton;
+    public boolean selectedAnother;
 
 
     @Override
@@ -83,17 +89,31 @@ public class TrackTrip extends AppCompatActivity {
 
     public void SelectTrain(View view)
     {
-        mode = " Train ";
+        if (mode != "Train") {
+            mode = " Train ";
+            imageButton = findViewById(R.id.train);
+            imageButton.setBackgroundResource(R.drawable.ic_train_clicked);
+        }
 
     }
 
     public void SelectBus(View view)
     {
-        mode = " Bus ";
+        if (mode != "Bus") {
+            mode = " Bus ";
+            imageButton = findViewById(R.id.bus);
+            imageButton.setBackgroundResource(R.drawable.ic_bus_clicked);
+        }
     }
 
     public void SelectCar(View view)
     {
-        mode = " Car ";
+        if (mode != " Car ") {
+            mode = " Car ";
+            imageButton = findViewById(R.id.ecar);
+            imageButton.setBackgroundResource(R.drawable.ic_car_clicked);
+        }
     }
+
+
 }
