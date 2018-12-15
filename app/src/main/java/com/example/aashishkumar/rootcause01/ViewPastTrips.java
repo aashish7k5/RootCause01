@@ -40,15 +40,18 @@ public class ViewPastTrips extends AppCompatActivity {
         Scanner in = null;
         try {
             in = new Scanner(MainActivity.tripsfile);
+            while (in.hasNextLine())
+            {
+                contents += in.nextLine();
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        while (in.hasNextLine())
+
+        if(contents.equals(""))
         {
-            contents += in.nextLine();
+            contents = "You don't have any trips yet!";
         }
-
-
 
         //        complete += start.getText(); complete += " *" + mode + "* "; complete += end.getText() + "//"; complete += Calendar.getInstance().getTime().toString().substring(0, 10); complete += "λ";
         String[] trips = contents.split("λ");
