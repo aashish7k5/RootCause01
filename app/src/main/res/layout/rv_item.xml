@@ -68,17 +68,27 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/saved"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/result"
                 android:height="40dp"
                 android:background="@drawable/cardview"
-
                 android:paddingLeft="10dp"
                 android:text="You saved 32 pounds of CO2!"
                 android:textColor="#000"
-                android:textStyle="bold"
-                android:textSize="24sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/fb"
+                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="40dp"
+                android:background="@drawable/cardview"
+                android:contentDescription="Share to Facebook!"
+                android:src="@drawable/facebook"
+                android:visibility="visible" />
 
         </LinearLayout>
 
