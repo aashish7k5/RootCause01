@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void TrackTripScreen(View view)
     {
         //This method works.
