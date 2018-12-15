@@ -56,8 +56,6 @@ public class TrackTrip extends AppCompatActivity {
         }
 
 
-
-        text.setTextColor(Color.CYAN);
         String complete = "";
         complete += start.getText(); complete += "*" + mode + "*"; complete += end.getText() + "*"; complete += Calendar.getInstance().getTime().toString().substring(0, 10); complete += "λ";
         try {
@@ -77,7 +75,6 @@ public class TrackTrip extends AppCompatActivity {
             contents += in.nextLine();
         }
 
-        text.setText(contents);
         start.setText(""); end.setText(""); mode = "";
     }
 
