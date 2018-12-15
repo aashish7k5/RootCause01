@@ -57,11 +57,11 @@ public class ViewPastTrips extends AppCompatActivity {
         setContentView(R.layout.activity_view_past_trips);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("View Past Trips");
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         imageModelArrayList = populateList();
-        Log.d("hjhjh", imageModelArrayList.size() + "");
         adapter = new Adapter(this, imageModelArrayList);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
@@ -110,35 +110,37 @@ public class ViewPastTrips extends AppCompatActivity {
         }
 
         //        complete += start.getText(); complete += " *" + mode + "* "; complete += end.getText() + "//"; complete += Calendar.getInstance().getTime().toString().substring(0, 10); complete += "λ";
-        trips = contents.split("λ");
-        start = new String[trips.length];
-        end = new String[trips.length];
-        mode = new String[trips.length];
-        date = new String[trips.length];
-        String[] saved = new String[trips.length];
-        String splitcontents = "";
 
 
-        //The arrays start, end, mode and date are what you can use in Google cards. Something like looping through the length of any of them, creating a google card for each i, and then
-        //adding the same index values to each card.
-        for (int i = 0; i < trips.length; i++) {
-            trips[i] = trips[i].replaceAll("\\*", "*");
-            String[] split = trips[i].split("\\*");
-            start[i] = split[0];
-            if(start[i].length() > 25){
-                start[i] = start[i].substring(0,24) + "...";
+            trips = contents.split("λ");
+            start = new String[trips.length];
+            end = new String[trips.length];
+            mode = new String[trips.length];
+            date = new String[trips.length];
+            String[] saved = new String[trips.length];
+            String splitcontents = "";
+
+
+            //The arrays start, end, mode and date are what you can use in Google cards. Something like looping through the length of any of them, creating a google card for each i, and then
+            //adding the same index values to each card.
+            for (int i = 0; i < trips.length; i++) {
+                trips[i] = trips[i].replaceAll("\\*", "*");
+                String[] split = trips[i].split("\\*");
+                start[i] = split[0];
+                if (start[i].length() > 25) {
+                    start[i] = start[i].substring(0, 24) + "...";
+                }
+                mode[i] = split[1];
+                end[i] = split[2];
+                if (end[i].length() > 25) {
+                    end[i] = end[i].substring(0, 24) + "...";
+                }
+                date[i] = split[3];
+                splitcontents += "Start = " + start[i] + " End = " + end[i] + " Mode = " + mode[i] + " Date = " + date[i];
+                splitcontents += "\n";
+                splitcontents += "\n";
+                saved[i] = (Math.random() * 100 % 1) + "";
             }
-            mode[i] = split[1];
-            end[i] = split[2];
-            if(end[i].length() > 25){
-                end[i] = end[i].substring(0,24) + "...";
-            }
-            date[i] = split[3];
-            splitcontents += "Start = " + start[i] + " End = " + end[i] + " Mode = " + mode[i] + " Date = " + date[i];
-            splitcontents += "\n";
-            splitcontents += "\n";
-            saved[i] = (Math.random()*100%1) + "";
-        }
 //        //mtext.setText(splitcontents);
 //        tstart.setText(start[start.length - 1]);
 //        tend.setText(end[end.length - 1]);
@@ -146,19 +148,19 @@ public class ViewPastTrips extends AppCompatActivity {
 //        tdate.setText(date[date.length - 1]);
 
 
-        ArrayList<Model> list = new ArrayList<>();
+            ArrayList<Model> list = new ArrayList<>();
 
-        for(int i = start.length - 1; i > 0; i--){
-            Model imageModel = new Model();
-            imageModel.setImage_drawable(R.drawable.ic_map);
-            imageModel.setText1("From: " + start[i]);
-            imageModel.setText2("To: " + end[i]);
-            imageModel.setMode("Mode: " + mode[i]);
-            list.add(imageModel);
+            for (int i = start.length - 1; i > 0; i--) {
+                Model imageModel = new Model();
+                imageModel.setImage_drawable(R.drawable.ic_map);
+                imageModel.setText1("From: " + start[i]);
+                imageModel.setText2("To: " + end[i]);
+                imageModel.setMode("Mode: " + mode[i]);
+                list.add(imageModel);
 
-        }
+            }
 
-        return list;
+            return list;
     }
 
     public interface ClickListener {
