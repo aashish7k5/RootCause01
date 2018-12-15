@@ -45,6 +45,12 @@ public class ViewPastTrips extends AppCompatActivity {
     private int[] myImageList = new int[10];
     private String[] myImageNameList = new String[10];
 
+    String[] trips;
+    String[] start;
+    String[] end;
+    String[] mode;
+    String[] date;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +79,14 @@ public class ViewPastTrips extends AppCompatActivity {
             }
         }));
 
-        //TextView mtext = findViewById(R.id.text);
+
+
+
+    }
+
+
+    private ArrayList<Model> populateList(){
+//TextView mtext = findViewById(R.id.text);
 
         TextView tstart = findViewById(R.id.info_text1);
         TextView tend = findViewById(R.id.info_text2);
@@ -97,11 +110,11 @@ public class ViewPastTrips extends AppCompatActivity {
         }
 
         //        complete += start.getText(); complete += " *" + mode + "* "; complete += end.getText() + "//"; complete += Calendar.getInstance().getTime().toString().substring(0, 10); complete += "λ";
-        String[] trips = contents.split("λ");
-        String[] start = new String[trips.length];
-        String[] end = new String[trips.length];
-        String[] mode = new String[trips.length];
-        String[] date = new String[trips.length];
+        trips = contents.split("λ");
+        start = new String[trips.length];
+        end = new String[trips.length];
+        mode = new String[trips.length];
+        date = new String[trips.length];
         String[] saved = new String[trips.length];
         String splitcontents = "";
 
@@ -112,8 +125,14 @@ public class ViewPastTrips extends AppCompatActivity {
             trips[i] = trips[i].replaceAll("\\*", "*");
             String[] split = trips[i].split("\\*");
             start[i] = split[0];
+            if(start[i].length() > 25){
+                start[i] = start[i].substring(0,24) + "...";
+            }
             mode[i] = split[1];
             end[i] = split[2];
+            if(end[i].length() > 25){
+                end[i] = end[i].substring(0,24) + "...";
+            }
             date[i] = split[3];
             splitcontents += "Start = " + start[i] + " End = " + end[i] + " Mode = " + mode[i] + " Date = " + date[i];
             splitcontents += "\n";
@@ -127,17 +146,14 @@ public class ViewPastTrips extends AppCompatActivity {
 //        tdate.setText(date[date.length - 1]);
 
 
-    }
-
-
-    private ArrayList<Model> populateList(){
-
         ArrayList<Model> list = new ArrayList<>();
 
-        for(int i = 0; i < 3; i++){
+        for(int i = start.length - 1; i > 0; i--){
             Model imageModel = new Model();
-            imageModel.setText1("hello");
             imageModel.setImage_drawable(R.drawable.ic_map);
+            imageModel.setText1("From: " + start[i]);
+            imageModel.setText2("To: " + end[i]);
+            imageModel.setMode("Mode: " + mode[i]);
             list.add(imageModel);
 
         }
