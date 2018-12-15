@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void SettingsScreen(View view)
     {
-        Intent intent = new Intent(this, SettingsScreen.class);
+        Intent intent = new Intent(this, SettingsNew.class);
         startActivity(intent);
     }
 }

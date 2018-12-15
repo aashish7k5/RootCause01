@@ -4,11 +4,20 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class ViewPastTrips extends AppCompatActivity {
@@ -20,7 +29,13 @@ public class ViewPastTrips extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView mtext = findViewById(R.id.text);
+        //TextView mtext = findViewById(R.id.text);
+
+        TextView tstart = findViewById(R.id.info_text1);
+        TextView tend = findViewById(R.id.info_text2);
+        TextView tmode = findViewById(R.id.info_text1);
+        TextView tdate = findViewById(R.id.info_text2);
+
         String contents = "";
         Scanner in = null;
         try {
@@ -32,7 +47,7 @@ public class ViewPastTrips extends AppCompatActivity {
         {
             contents += in.nextLine();
         }
-        mtext.setText(contents);
+
 
 
         //        complete += start.getText(); complete += " *" + mode + "* "; complete += end.getText() + "//"; complete += Calendar.getInstance().getTime().toString().substring(0, 10); complete += "λ";
@@ -42,6 +57,7 @@ public class ViewPastTrips extends AppCompatActivity {
         String[] mode = new String[trips.length];
         String[] date = new String[trips.length];
         String splitcontents = "";
+
 
         //The arrays start, end, mode and date are what you can use in Google cards. Something like looping through the length of any of them, creating a google card for each i, and then
         //adding the same index values to each card.
@@ -55,10 +71,11 @@ public class ViewPastTrips extends AppCompatActivity {
             splitcontents += "\n";
 
         }
-        mtext.setText(splitcontents);
-
-
-
-
+        //mtext.setText(splitcontents);
+        tstart.setText(start[start.length-1]);
+        tend.setText(end[end.length-1]);
+        tmode.setText(mode[mode.length-1]);
+        tdate.setText(date[date.length-1]);
     }
+
 }

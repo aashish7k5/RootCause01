@@ -26,7 +26,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SettingsScreen"
-            android:label="@string/title_activity_settings_screen"></activity>
+            android:label="@string/title_activity_settings_screen" />
+        <activity android:name=".SettingsNew"></activity>
     </application>
 
 </manifest>
