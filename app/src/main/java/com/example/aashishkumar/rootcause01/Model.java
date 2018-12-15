@@ -9,6 +9,8 @@ public class Model {
     private String text2;
     private String mode;
     private int image_drawable;
+    private int fb_logo;
+    private String saved;
 
     public String getText1() {
         return text1;
@@ -39,5 +41,20 @@ public class Model {
 
     public void setImage_drawable(int image_drawable) {
         this.image_drawable = image_drawable;
+    }
+    public int getFb_logo() {
+        return fb_logo;
+    }
+
+    public void setFb_logo(int fb_logo) {
+        this.fb_logo = fb_logo;
+    }
+
+    public String getSaved() {
+        return saved;
+    }
+
+    public void setSaved(String saved) {
+        this.saved = saved;
     }
 }

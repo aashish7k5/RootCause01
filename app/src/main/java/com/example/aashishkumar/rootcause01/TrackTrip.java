@@ -39,7 +39,7 @@ public class TrackTrip extends AppCompatActivity {
         start = (EditText) findViewById(R.id.starttextbox);
         end = (EditText) findViewById(R.id.endtextbox);
         text = (TextView) findViewById(R.id.displaytext);
-        text.setText("Here");
+//        text.setText("Here");
         //Create file data here.
     }
 

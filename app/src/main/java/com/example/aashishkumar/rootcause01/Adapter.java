@@ -41,6 +41,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         holder.text1.setText(imageModelArrayList.get(position).getText1());
         holder.text2.setText(imageModelArrayList.get(position).getText2());
         holder.mode.setText(imageModelArrayList.get(position).getMode());
+        holder.saved.setText(imageModelArrayList.get(position).getSaved());
     }
 
     @Override
@@ -50,7 +51,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView text1, text2, mode;
+        TextView text1, text2, mode, saved;
         ImageView ic;
 
         public MyViewHolder(View itemView) {
@@ -59,6 +60,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             text1 = (TextView) itemView.findViewById(R.id.info_text1);
             text2 = (TextView) itemView.findViewById(R.id.info_text2);
             mode = (TextView) itemView.findViewById(R.id.mode);
+            saved = (TextView) itemView.findViewById(R.id.saved);
             ic = (ImageView) itemView.findViewById(R.id.ic);
         }
 
