@@ -1,48 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPastTrips">
 
-    <!-- A CardView that contains a TextView -->
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/scrollHorizontal"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context=".ViewPastTrips"
-        tools:showIn="@layout/activity_view_past_trips">
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="600dp">
+<!--<?xml version="1.0" encoding="utf-8"?>-->
 
-                <TextView
-                    android:id="@+id/info_text1"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="-300dp"
-                    android:layout_marginTop="120dp"
-                    android:text="Some text" />
-
-                <TextView
-                    android:id="@+id/info_text2"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="200dp"
-                    android:text="Some more text" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="251dp"
-                    android:layout_height="87dp"
-                    android:layout_marginLeft="40dp"
-                    app:srcCompat="@drawable/ic_map"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-
-            </LinearLayout>
+    <!--&lt;!&ndash; A CardView that contains a TextView &ndash;&gt;-->
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/scrollHorizontal"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <!--tools:context=".ViewPastTrips"-->
+        <!--tools:showIn="@layout/activity_view_past_trips">-->
 
 
 
-        </ScrollView>
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/recycler"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="15dp">-->
+        <!--</android.support.v7.widget.RecyclerView>-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="380dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="600dp">&ndash;&gt;-->
+
+
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/imageView3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="251dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="87dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginLeft="40dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:srcCompat="@drawable/ic_map"&ndash;&gt;-->
+                    <!--&lt;!&ndash;tools:srcCompat="@tools:sample/backgrounds/scenic" />&ndash;&gt;-->
+
+
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+
+        <!--</ScrollView>-->
 
