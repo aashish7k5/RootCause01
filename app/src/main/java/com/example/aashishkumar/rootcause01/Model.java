@@ -1,12 +1,13 @@
 package com.example.aashishkumar.rootcause01;
 
 /**
- * Created by Parsania Hardik on 28-Jun-17.
+ * Code forked from/inspired by Parsania Hardik on GitHub.
  */
 public class Model {
 
     private String text1;
     private String text2;
+    private String mode;
     private int image_drawable;
 
     public String getText1() {
@@ -24,7 +25,13 @@ public class Model {
     public void setText2(String text2) {
         this.text2 = text2;
     }
+    public String getMode() {
+        return mode;
+    }
 
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
 
     public int getImage_drawable() {
         return image_drawable;

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by Parsania Hardik on 26-Jun-17.
+ * Code forked from/inspired by Parsania Hardik on GitHub.
  */
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
@@ -40,6 +40,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         holder.ic.setImageResource(imageModelArrayList.get(position).getImage_drawable());
         holder.text1.setText(imageModelArrayList.get(position).getText1());
         holder.text2.setText(imageModelArrayList.get(position).getText2());
+        holder.mode.setText(imageModelArrayList.get(position).getMode());
     }
 
     @Override
@@ -49,7 +50,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView text1, text2;
+        TextView text1, text2, mode;
         ImageView ic;
 
         public MyViewHolder(View itemView) {
@@ -57,6 +58,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
             text1 = (TextView) itemView.findViewById(R.id.info_text1);
             text2 = (TextView) itemView.findViewById(R.id.info_text2);
+            mode = (TextView) itemView.findViewById(R.id.mode);
             ic = (ImageView) itemView.findViewById(R.id.ic);
         }
 
