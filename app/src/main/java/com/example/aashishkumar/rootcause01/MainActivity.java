@@ -14,12 +14,14 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 public class MainActivity extends AppCompatActivity {
     public static File tripsfile;
     private TextView mTextMessage;
+    public static File settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tripsfile = new File(getApplicationContext().getFilesDir(), "tripsdata");
+        settings = new File(getApplicationContext().getFilesDir(), "settings");
 
 
 

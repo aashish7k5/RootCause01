@@ -35,6 +35,7 @@ public class ViewPastTrips extends AppCompatActivity {
         TextView tend = findViewById(R.id.info_text2);
         TextView tmode = findViewById(R.id.info_text1);
         TextView tdate = findViewById(R.id.info_text2);
+        TextView tsaved = findViewById(R.id.info_text1);
 
         String contents = "";
         Scanner in = null;
@@ -59,6 +60,7 @@ public class ViewPastTrips extends AppCompatActivity {
         String[] end = new String[trips.length];
         String[] mode = new String[trips.length];
         String[] date = new String[trips.length];
+        String[] saved = new String[trips.length];
         String splitcontents = "";
 
 
@@ -72,13 +74,14 @@ public class ViewPastTrips extends AppCompatActivity {
             splitcontents += "Start = " + start[i] + " End = " + end[i] + " Mode = " + mode[i] + " Date = " + date[i];
             splitcontents += "\n";
             splitcontents += "\n";
-
+            saved[i] = (Math.random()*100%1) + "";
         }
         //mtext.setText(splitcontents);
         tstart.setText(start[start.length-1]);
         tend.setText(end[end.length-1]);
         tmode.setText(mode[mode.length-1]);
         tdate.setText(date[date.length-1]);
+        tsaved.setText(saved[saved.length-1]);
     }
 
 }
