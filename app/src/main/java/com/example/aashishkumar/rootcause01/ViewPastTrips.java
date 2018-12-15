@@ -125,12 +125,8 @@ public class ViewPastTrips extends AppCompatActivity {
 //        tend.setText(end[end.length - 1]);
 //        tmode.setText(mode[mode.length - 1]);
 //        tdate.setText(date[date.length - 1]);
-        //mtext.setText(splitcontents);
-        tstart.setText(start[start.length-1]);
-        tend.setText(end[end.length-1]);
-        tmode.setText(mode[mode.length-1]);
-        tdate.setText(date[date.length-1]);
-        tsaved.setText(saved[saved.length-1]);
+
+
     }
 
 
