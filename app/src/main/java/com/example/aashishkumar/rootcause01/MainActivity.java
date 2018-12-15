@@ -6,7 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.io.File;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
@@ -15,15 +27,18 @@ public class MainActivity extends AppCompatActivity {
     public static File tripsfile;
     private TextView mTextMessage;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tripsfile = new File(getApplicationContext().getFilesDir(), "tripsdata");
-
-
-
     }
+
+
+
 
     public void TrackTripScreen(View view)
     {
