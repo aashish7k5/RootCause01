@@ -45,7 +45,7 @@ public class TrackTrip extends AppCompatActivity {
         start = (EditText) findViewById(R.id.starttextbox);
         end = (EditText) findViewById(R.id.endtextbox);
         text = (TextView) findViewById(R.id.displaytext);
-        text.setText("Here");
+//        text.setText("Here");
         //Create file data here.
     }
 
@@ -62,8 +62,6 @@ public class TrackTrip extends AppCompatActivity {
         }
 
 
-
-        text.setTextColor(Color.CYAN);
         String complete = "";
         complete += start.getText(); complete += "*" + mode + "*"; complete += end.getText() + "*"; complete += Calendar.getInstance().getTime().toString().substring(0, 10); complete += "λ";
         try {
@@ -83,7 +81,6 @@ public class TrackTrip extends AppCompatActivity {
             contents += in.nextLine();
         }
 
-        text.setText(contents);
         start.setText(""); end.setText(""); mode = "";
     }
 

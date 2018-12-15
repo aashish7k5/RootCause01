@@ -11,17 +11,24 @@
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:layout_gravity="center"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         card_view:cardCornerRadius="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="top"
+            android:id="@+id/ic"
+            android:src="@drawable/ic_map"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -31,9 +38,9 @@
                 android:background="@drawable/cardview"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="Image"
-                android:textColor="#fff"
-                android:textStyle="bold"
+                android:text="From:"
+                android:textColor="#000"
+
                 android:textSize="18sp" />
             <TextView
                 android:layout_width="match_parent"
@@ -43,19 +50,45 @@
                 android:background="@drawable/cardview"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:text="Image"
-                android:textColor="#fff"
-                android:textStyle="bold"
+                android:text="To:"
+                android:textColor="#000"
+
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mode"
+                android:height="40dp"
+                android:background="@drawable/cardview"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Mode: "
+                android:textColor="#000"
+
                 android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/saved"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:height="40dp"
+                android:background="@drawable/cardview"
+                android:paddingLeft="10dp"
+                android:text="You saved 32 pounds of CO2!"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/ic"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_map"/>
+            <ImageButton
+                android:id="@+id/fb"
+                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="40dp"
+                android:background="@drawable/cardview"
+                android:contentDescription="Share to Facebook!"
+                android:src="@drawable/facebook"
+                android:visibility="visible" />
 
         </LinearLayout>
 
