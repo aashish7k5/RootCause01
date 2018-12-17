@@ -65,6 +65,7 @@ public class SettingsNew extends AppCompatActivity {
         }
         else
         {
+            text.setTextColor(Color.BLACK);
             text.setText("");
         }
         String complete = "";

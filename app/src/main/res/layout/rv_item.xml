@@ -87,6 +87,7 @@
                 android:height="40dp"
                 android:background="@drawable/cardview"
                 android:contentDescription="Share to Facebook!"
+                android:onClick="FacebookScreen"
                 android:src="@drawable/facebook"
                 android:visibility="visible" />
 

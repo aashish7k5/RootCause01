@@ -1,6 +1,8 @@
 package com.example.aashishkumar.rootcause01;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -27,6 +29,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
+import java.net.URL;
 import java.util.ArrayList;
 import org.w3c.dom.Text;
 
@@ -208,5 +211,10 @@ public class ViewPastTrips extends AppCompatActivity {
         public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
 
         }
+    }
+    public void FacebookScreen(View view)
+    {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com"));
+        startActivity(browserIntent);
     }
 }
