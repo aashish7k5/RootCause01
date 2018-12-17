@@ -1,5 +1,6 @@
 package com.example.aashishkumar.rootcause01;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -82,6 +83,9 @@ public class TrackTrip extends AppCompatActivity {
         }
 
         start.setText(""); end.setText(""); mode = "";
+        Intent intent = new Intent(this, ViewPastTrips.class);
+        startActivity(intent);
+
     }
 
     public void SelectTrain(View view)
@@ -90,6 +94,10 @@ public class TrackTrip extends AppCompatActivity {
             mode = " Train ";
             imageButton = findViewById(R.id.train);
             imageButton.setBackgroundResource(R.drawable.ic_train_clicked);
+            ImageButton imageButton2 = findViewById(R.id.bus);
+            ImageButton imageButton3 = findViewById(R.id.ecar);
+            imageButton2.setBackgroundResource(R.drawable.ic_bus);
+            imageButton3.setBackgroundResource(R.drawable.ic_car);
         }
 
     }
@@ -100,6 +108,10 @@ public class TrackTrip extends AppCompatActivity {
             mode = " Bus ";
             imageButton = findViewById(R.id.bus);
             imageButton.setBackgroundResource(R.drawable.ic_bus_clicked);
+            ImageButton imageButton2 = findViewById(R.id.ecar);
+            ImageButton imageButton3 = findViewById(R.id.train);
+            imageButton2.setBackgroundResource(R.drawable.ic_car);
+            imageButton3.setBackgroundResource(R.drawable.ic_train);
         }
     }
 
@@ -109,6 +121,11 @@ public class TrackTrip extends AppCompatActivity {
             mode = " Car ";
             imageButton = findViewById(R.id.ecar);
             imageButton.setBackgroundResource(R.drawable.ic_car_clicked);
+            ImageButton imageButton2 = findViewById(R.id.bus);
+            ImageButton imageButton3 = findViewById(R.id.train);
+            imageButton2.setBackgroundResource(R.drawable.ic_bus);
+            imageButton3.setBackgroundResource(R.drawable.ic_train);
+
         }
     }
 

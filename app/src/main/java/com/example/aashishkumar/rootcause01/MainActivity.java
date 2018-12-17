@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tripsfile = new File(getApplicationContext().getFilesDir(), "tripsdata");
-
         settings = new File(getApplicationContext().getFilesDir(), "settings");
     }
 
