@@ -140,7 +140,10 @@ public class ViewPastTrips extends AppCompatActivity {
             splitcontents += "Start = " + start[i] + " End = " + end[i] + " Mode = " + mode[i] + " Date = " + date[i];
             splitcontents += "\n";
             splitcontents += "\n";
-            saved[i] = (Math.random()*100%1) + "";
+            saved[i] = (Math.random()*100) + "";
+            if(saved[i].length() > 5){
+                saved[i] = saved[i].substring(0,5);
+            }
         }
 //        //mtext.setText(splitcontents);
 //        tstart.setText(start[start.length - 1]);
@@ -157,6 +160,7 @@ public class ViewPastTrips extends AppCompatActivity {
             imageModel.setText1("From: " + start[i]);
             imageModel.setText2("To: " + end[i]);
             imageModel.setMode("Mode: " + mode[i]);
+            imageModel.setSaved("You saved " + saved[i] + " pounds of CO2!");
             list.add(imageModel);
 
         }
